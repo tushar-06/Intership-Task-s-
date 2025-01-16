@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+/* Navigation Bar */
+.nav-bar {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    padding: 5px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 10px;
+}
+
+.nav-bar li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background: linear-gradient(90deg, rgb(246, 15, 39) 0%, rgba(0,204,255,1) 100%);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Click Effect for Links */
+.nav-bar a:active {
+    background-color: #007acc; 
+    color: white;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    transform: scale(1.1); 
+    border-radius: 6px; 
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 10px 0;
+    display: none;
+    border-radius: 4px;
+    min-width: 200px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu a {
+    padding: 10px 10px;
+    color: white;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background: linear-gradient(90deg, rgb(228, 247, 14) 0%, rgba(0,255,150,1) 100%);
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #444;
+    padding: 10px 0;
+    display: none;
+    border-radius: 4px;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu a {
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background: linear-gradient(90deg, rgba(123,0,255,1) 0%, rgba(0,255,255,1) 100%);
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu:hover .submenu {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-menu, .submenu {
+        position: static;
+    }
+}
+
+/* Remaining Page Background */
+body {
+    background-image: url(car.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+nav {
+    background-color: #333; 
+}
+/* Bottom Center with Multiple Symbols */
+.bottom-center {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    font-size: 10px; 
+    color: #d6d4dd; 
+    font-style:italic ; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+}
+
+.bottom-center span {
+    display: block; 
+}
